@@ -10,21 +10,24 @@
 
 # Imports math
 import math
+import colorama
+
+colorama.init()
 
 # Displays a welcoming message and the 3 calculator options. 
 def main():
-    print("Hello, This program will allow you to calculate the surface area as well as the volume, by inputting the edge length of a tetrahedron!")
+    print( colorama.Fore.BLACK + "Hello, This program will allow you to calculate the surface area as well as the volume, by inputting the edge length of a tetrahedron!")
     print("available options:")
-    print("1. Volume calculator")
-    print("2. Surface area calculator")
-    print("3. Edge length calculator")
+    print( colorama.Fore.RED + "1. Volume calculator" + colorama.Fore.RESET)
+    print( colorama.Fore.WHITE + "2. Surface area calculator" + colorama.Fore.RESET)
+    print( colorama.Fore.BLUE + "3. Edge length calculator" + colorama.Fore.RESET)
 
 # Will display any of the 3 choices depending on the user's choice. 
-    choice = input("Please select an option: ")
+    choice = input( colorama.Fore.BLACK + "Please select an option: " + colorama.Fore.RESET)
 
 # 1st choice, calculates the volume from the edge length, displays units and formats answer to 2 decimals.
     if choice == "1":
-        edge = float(input("Please enter edge length (cm): "))
+        edge = float(input( "Please enter edge length (cm): "))
         volume = (edge ** 3 / (6 * math.sqrt(2)))
         print("Volume is {:.2f} cm³.".format(volume))
 
